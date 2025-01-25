@@ -1,0 +1,18 @@
+import random
+#using the random library a random number can be generated which may be random or from the given range
+random_number=random.randint(1, 10)
+while True:
+    #until the user gives correct guess or the user terminates the game it will continue
+    print("Enter 1 for giving input")
+    print("Enter 0 to end the game")
+    choice=int(input("Enter operation to execute: "))
+    if choice == 0:
+        break
+    else:
+        guess_number=int(input("Enter the guess number: "))
+        if guess_number>random_number:
+            print("Too High")
+        elif guess_number<random_number:
+            print("Too Low")
+        elif guess_number==random_number:
+            print(f"{guess_number} is the number")
